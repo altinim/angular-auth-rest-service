@@ -1,0 +1,7 @@
+.p-error {
+	color: red;
+}
+input-error {
+	outline: 2px solid red;
+	border: 2px solid red;
+}

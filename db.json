@@ -1,0 +1,124 @@
+{
+  "user": [
+    {
+      "firstName": "Altin",
+      "lastName": "Morina",
+      "email": "altin.morina@beriflapp.com",
+      "password": "12345",
+      "city": "Prishtine",
+      "id": 31
+    },
+    {
+      "firstName": "Liridona",
+      "lastName": "Berisha",
+      "email": "liridona.berisha@beriflapp.com",
+      "password": "13579",
+      "city": "Prishtina",
+      "id": 16
+    },
+    {
+      "firstName": "Fisnik",
+      "lastName": "Gashi",
+      "email": "fisnik.gashi@beriflapp.com",
+      "password": "24680",
+      "city": "Peja",
+      "id": 17
+    },
+    {
+      "firstName": "Vjosa",
+      "lastName": "Qerimi",
+      "email": "vjosa.qerimi@beriflapp.com",
+      "password": "98765",
+      "city": "Gjakova",
+      "id": 18
+    },
+    {
+      "firstName": "Ahmet",
+      "lastName": "Gjinovci",
+      "email": "dardan.krasniqi@beriflapp.com",
+      "password": "54321",
+      "city": "Prizren",
+      "id": 19
+    },
+    {
+      "firstName": "Arbër",
+      "lastName": "Kelmendi",
+      "email": "arber.kelmendi@beriflapp.com",
+      "password": "12345",
+      "city": "Mitrovica",
+      "id": 20
+    },
+    {
+      "firstName": "Valmira",
+      "lastName": "Rexhepi",
+      "email": "valmira.rexhepi@beriflapp.com",
+      "password": "67890",
+      "city": "Ferizaj",
+      "id": 21
+    },
+    {
+      "firstName": "Muharrem",
+      "lastName": "Shala",
+      "email": "muharrem.shala@beriflapp.com",
+      "password": "45678",
+      "city": "Prizren",
+      "id": 22
+    },
+    {
+      "firstName": "Rron",
+      "lastName": "Krasniqi",
+      "email": "rron.krasniqi@beriflapp.com",
+      "password": "90123",
+      "city": "Decan",
+      "id": 23
+    },
+    {
+      "firstName": "Kreshnik",
+      "lastName": "Deda",
+      "email": "kreshnik.deda@beriflapp.com",
+      "password": "78901",
+      "city": "Peja",
+      "id": 24
+    },
+    {
+      "firstName": "Fitore",
+      "lastName": "Bajrami",
+      "email": "fitore.bajrami@beriflapp.com",
+      "password": "34567",
+      "city": "Gjakova",
+      "id": 25
+    },
+    {
+      "firstName": "Ardian",
+      "lastName": "Hoxha",
+      "email": "ardian.hoxha@beriflapp.com",
+      "password": "89012",
+      "city": "Prishtina",
+      "id": 26
+    },
+    {
+      "firstName": "Blert",
+      "lastName": "Gashi",
+      "email": "blert.gashi@beriflapp.com",
+      "password": "45678",
+      "city": "Peja",
+      "id": 27
+    },
+    {
+      "firstName": "Ardita",
+      "lastName": "Hyseni",
+      "email": "ardita.hyseni@beriflapp.com",
+      "password": "76543",
+      "city": "Gjilan",
+      "id": 29
+    },
+    {
+      "firstName": "Dituria",
+      "lastName": "Deda",
+      "email": "dituria.deda@beriflapp.com",
+      "password": "87654",
+      "city": "Decan",
+      "id": 30
+    }
+  ]
+}

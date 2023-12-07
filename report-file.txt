@@ -1,0 +1,28 @@
+
+Date: 11/10/2
+Day: Friday
+
+Angular - 2nd week 
+
+Today is the last day of the 2nd week of working with Angular  and here is a summary of what I have worked on today:
+
+-Performance improvements:
+I have updated the Angular task we had this weeek. Although the basic functions were already there, I gave them functional changes to have a better performance.
+
+-Project Review:
+I took a look at some of the small projects I did in the last 2 weeks that I have followed on different courses and the Angular documentation
+
+-Error Handling:
+I added  error handling for HTTP requests, ensuring that the website handles any error.
+
+Cities data fetches from JSON format:
+City data is now dynamically retrieved from JSON format.
+
+-Landing page:
+I came up with a welcoming homepage, and set the tone for a great user experience.
+
+-Blur background effect
+I added a cool background blur effect to sce things and give the project a more immersive feel.
+
+-User Error:
+Now input errors come with displays that are better, more visually appealing, and make it easier for users to understand what’s going on.

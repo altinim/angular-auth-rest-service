@@ -1,0 +1,246 @@
+<app-header></app-header>
+<div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+	<h1
+		class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900"
+	>
+		Sign up
+	</h1>
+	<div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+		<form
+			class="space-y-6"
+			[formGroup]="registerForm"
+			(ngSubmit)="submitDetails()"
+		>
+			<div class="flex justify-between space-x-4">
+				<div ngClass="w-full">
+					<label
+						for="firstName"
+						class="block text-sm font-medium leading-6 text-gray-900"
+						>First Name</label
+					>
+					<div class="mt-2">
+						<input
+							id="firstName"
+							name="firstName"
+							type="text"
+							formControlName="firstName"
+							required
+							[ngClass]="{
+								'border-2 border-red-600':
+									firstName.invalid &&
+									(firstName.dirty || firstName.touched)
+							}"
+							class="block w-full rounded-md p-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6"
+						/>
+						<small
+							*ngIf="
+								firstName.invalid &&
+								(firstName.dirty || firstName.touched)
+							"
+							class="block p-error"
+						>
+							<div *ngIf="firstName.errors?.['required']">
+								First name is required.
+							</div>
+							<div *ngIf="firstName.errors?.['pattern']">
+								Enter a valid first name
+							</div>
+						</small>
+					</div>
+				</div>
+				<div class="w-full">
+					<label
+						for="lastName"
+						class="block text-sm font-medium leading-6 text-gray-900"
+						>Last Name</label
+					>
+					<div class="mt-2">
+						<input
+							id="lastName"
+							name="lastName"
+							type="text"
+							formControlName="lastName"
+							required
+							[ngClass]="{
+								'border-2 border-red-600':
+									lastName.invalid &&
+									(lastName.dirty || lastName.touched)
+							}"
+							class="blockw-full rounded-md px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+						/>
+						<small
+							*ngIf="
+								lastName.invalid &&
+								(lastName.dirty || lastName.touched)
+							"
+							class="block p-error"
+						>
+							<div *ngIf="lastName.errors?.['required']">
+								Last name is required.
+							</div>
+							<div *ngIf="lastName.errors?.['pattern']">
+								Enter a valid last name
+							</div>
+						</small>
+					</div>
+				</div>
+			</div>
+			<div>
+				<label
+					for="email"
+					class="block text-sm font-medium leading-6 text-gray-900"
+					>Email address</label
+				>
+				<div class="py-2">
+					<input
+						type="text"
+						class="input"
+						formControlName="email"
+						[ngClass]="{
+							'border-2 border-red-600':
+								email.invalid && (email.dirty || email.touched)
+						}"
+						class="block w-full rounded-md border-0 p-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6"
+					/>
+					<small
+						*ngIf="email.invalid && (email.dirty || email.touched)"
+						class="block p-error"
+					>
+						<div *ngIf="email.errors?.['required']">
+							Email is required.
+						</div>
+						<div *ngIf="email.errors?.['email']">
+							Email should be valid
+						</div>
+					</small>
+				</div>
+			</div>
+			<div>
+				<div class="flex items-center justify-between">
+					<label
+						for="password"
+						class="block text-sm font-medium leading-6 text-gray-900"
+						>Password</label
+					>
+				</div>
+				<div>
+					<input
+						id="password"
+						name="password"
+						formControlName="password"
+						type="password"
+						required
+						[ngClass]="{
+							'border-2 border-red-600':
+								password.invalid &&
+								(password.dirty || password.touched)
+						}"
+						class="block w-full rounded-md border-0 p-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6"
+					/>
+					<small
+						*ngIf="
+							password.invalid &&
+							(password.dirty || password.touched)
+						"
+						class="block p-error"
+					>
+						<div *ngIf="password.errors?.['required']">
+							Password is required.
+						</div>
+					</small>
+				</div>
+			</div>
+			<div>
+				<label
+					for="email"
+					class="block text-sm font-medium leading-6 text-gray-900"
+					>Confirm Password</label
+				>
+				<div class="py-2">
+					<input
+						id="confirmPassword"
+						name="confirmPassword"
+						formControlName="confirmPassword"
+						type="password"
+						[ngClass]="{
+							'border-2 border-red-600':
+								confirmPassword.invalid &&
+								(confirmPassword.dirty ||
+									confirmPassword.touched)
+						}"
+						required
+						class="block w-full rounded-md border-0 p-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6"
+					/>
+					<small
+						*ngIf="
+							confirmPassword.invalid &&
+							(confirmPassword.dirty || confirmPassword.touched)
+						"
+						class="block p-error"
+					>
+						<div *ngIf="confirmPassword.errors?.['required']">
+							Confirm the password
+						</div>
+					</small>
+					<small
+						class="block p-error"
+						*ngIf="
+							registerForm.errors?.['passwordMismatch'] &&
+							confirmPassword.valid &&
+							password.valid
+						"
+					>
+						Password should match
+					</small>
+				</div>
+			</div>
+			<div class="mt-2">
+				<label
+					for="city"
+					class="block text-sm font-medium leading-6 text-gray-900"
+					>City</label
+				>
+				<div class="mt-2">
+					<select
+						id="city"
+						name="city"
+						[(ngModel)]="selectedCity"
+						formControlName="city"
+						[ngClass]="{
+							'border-2 border-red-600':
+								confirmPassword.invalid &&
+								(confirmPassword.dirty ||
+									confirmPassword.touched)
+						}"
+						class="block w-full rounded-md border-0 p-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6"
+					>
+						<option value="" disabled>Select a city</option>
+						<option *ngFor="let city of cities" [value]="city">
+							{{ city }}
+						</option>
+					</select>
+				</div>
+			</div>
+			<div>
+				<button
+					type="submit"
+					[disabled]="registerForm.invalid"
+					class="flex w-full disabled:bg-gray-300 disabled:text-gray-100 justify-center rounded-md bg-gray-800 px-3 py-1.5 text-sm font-semibold leading-6 disabled:text-red text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600"
+				>
+					Sign up
+				</button>
+			</div>
+		</form>
+	</div>
+	<div class="mt-2">
+		<p class="mt-10 text-center text-sm text-gray-500">
+			Already have an account?
+			<a
+				href="#"
+				routerLink="/signin"
+				class="font-semibold leading-6 text-blue-600 hover:text-blue-500"
+				>Sign in</a
+			>
+		</p>
+	</div>
+</div>

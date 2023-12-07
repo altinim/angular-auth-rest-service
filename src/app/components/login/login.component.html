@@ -1,0 +1,99 @@
+<app-header></app-header>
+<div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+	<div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+		<h1
+			class="mt-10 text-center text-xl font-extrabold leading-9 tracking-tight text-gray-900"
+		>
+			Sign in
+		</h1>
+		<div class="sm:mx-auto sm:w-full sm:max-w-sm">
+			<form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+				<div>
+					<label
+						for="email"
+						class="block text-sm font-medium leading-6 text-gray-900"
+						>Email address</label
+					>
+					<div class="my-4">
+						<input
+							id="email"
+							name="email"
+							type="email"
+							autocomplete="email"
+							mdInput
+							[ngClass]="{
+								'border-2 border-red-600':
+									email.invalid &&
+									(email.dirty || email.touched)
+							}"
+							required
+							formControlName="email"
+							class="block w-full rounded-md border-0 p-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6"
+						/>
+						<small
+							*ngIf="
+								email.invalid && (email.dirty || email.touched)
+							"
+							class="block p-error"
+						>
+							<div
+								*ngIf="email.errors?.['required']"
+								class="p-error"
+							>
+								Email is required.
+							</div>
+							<div *ngIf="email.errors?.['email']">
+								Email should be valid
+							</div>
+						</small>
+					</div>
+					<div class="flex items-center justify-between my-2">
+						<label
+							for="password"
+							class="block text-sm font-medium leading-6 text-gray-900"
+							>Password</label
+						>
+						<div class="text-sm">
+							<a
+								href="#"
+								class="font-semibold text-blue-600 hover:text-blue-500"
+								>Forgot password?</a
+							>
+						</div>
+					</div>
+					<div class="my-2">
+						<input
+							id="password"
+							name="password"
+							formControlName="password"
+							type="password"
+							autocomplete="current-password"
+							required
+							class="block w-full rounded-md border-0 p-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6"
+						/>
+					</div>
+				</div>
+				<div class="mt-8">
+					<button
+						[disabled]="loginForm.invalid"
+						type="submit"
+						class="flex w-full disabled:bg-gray-300 disabled:text-gray-100 justify-center rounded-md bg-gray-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600"
+					>
+						Sign in
+					</button>
+				</div>
+			</form>
+		</div>
+		<div class="mt-2">
+			<p class="text-center text-sm text-gray-500">
+				Don't have an account?
+				<a
+					href="#"
+					class="font-semibold leading-6 text-blue-600 hover:text-blue-500"
+					routerLink="/signup"
+					>Sign up</a
+				>
+			</p>
+		</div>
+	</div>
+</div>
